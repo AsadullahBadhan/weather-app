@@ -12,7 +12,7 @@ let defaultUrl = url + 'dhaka';
 
 window.addEventListener('DOMContentLoaded', callApi)
 
-window.addEventListener('submit', function (e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
     let searchBoxValue = searchBox.value;
     if (searchBoxValue.includes(" ")) {
@@ -32,7 +32,6 @@ function callApi() {
 }
 
 function getWeather(data) {
-    console.log(data)
     //showing city name
     placeName.innerText = data.name;
     // get temperature
